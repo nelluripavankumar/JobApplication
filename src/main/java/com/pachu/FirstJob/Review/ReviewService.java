@@ -1,10 +1,11 @@
 package com.pachu.FirstJob.Review;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ReviewService {
-    Optional<Review> findAllReviews(Long id);
+    List<Review> findAllReviews(Long CompanyId);
+
+    List<Review> findReviewsId(Long id, Long reviewId);
 
     List<Review> findAll();
 

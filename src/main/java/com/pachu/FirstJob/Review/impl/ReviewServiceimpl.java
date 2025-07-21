@@ -20,12 +20,20 @@ public class ReviewServiceimpl implements ReviewService {
     }
 
     @Override
-    public Optional<Review> findAllReviews(Long CompanyId) {
+    public List<Review> findAllReviews(Long CompanyId) {
         return reviewRepository.findByCompanyId(CompanyId);
     }
 
     @Override
+    public List<Review> findReviewsId(Long companyId, Long reviewId) {
+        List<Review> r = reviewRepository.findByCompanyId(companyId);
+
+        return r;
+    }
+
+    @Override
     public List<Review> findAll() {
+
         return reviewRepository.findAll();
     }
 
